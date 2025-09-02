@@ -9,7 +9,7 @@ const idadeDoAnimal = perguntaIdade();
 
 console.log(`A idade do animal é: ${idadeDoAnimal} anos`);
 
-function calcularIdadeAjustada(idadeAntig) {
+const calcularIdadeAjustada = (idadeAntig) => {
     const idadeVerdadeira = idadeAntig * 7;
     return idadeVerdadeira;
 
