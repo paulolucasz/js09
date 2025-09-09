@@ -25,9 +25,46 @@ const animal = {
                 console.log("Não tem consultas marcadas");
             }
     }
-}
+} 
 
 animal.verificarConsultas();
+
+const criarDono = (nome, celular) => {
+    return {
+        nome,
+        celular,
+    }
+}
+
+const dono1 = criarDono("Paulo", 2159951542)
+
+const criarPet = (nome, especie, raca, idade, dono) => {
+    return {
+        nome,
+        especie,
+        raca,
+        idade,
+        dono,
+        consultas: [],
+        verificarConsultas() {
+            console.log(`Consultas marcadas para ${this.nome}:`);
+            console.log(this.consultas);
+        }
+    }
+}
+
+const animal1 = criarPet("Richard","Cachorro","PitBull",25, dono1)
+
+console.log(dono1);
+console.log(animal1);
+
+animal.verificarConsultas();
+    ''
+
+
+
+
+
 
 // console.log(animal);
 
