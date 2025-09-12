@@ -59,7 +59,7 @@ console.log(dono1);
 console.log(animal1);
 
 animal.verificarConsultas();
-    ''
+    
 
 
 
