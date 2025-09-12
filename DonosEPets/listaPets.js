@@ -11,9 +11,12 @@ pets.forEach(pet => {
     container.appendChild(newEl);
     const newNome = document.createElement("h3");
     const newIdade = document.createElement("h3");
+    const newEspecie = document.createElement("h3");
     newEl.appendChild(newNome);
     newEl.appendChild(newIdade);
+    newEl.appendChild(newEspecie);
     newNome.innerText= pet.nome;
     newIdade.innerText = pet.idade;
+    newEspecie.innerText = pet.especie; 
     newEl.style.border = "black solid 2px";
 })
