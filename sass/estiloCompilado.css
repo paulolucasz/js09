@@ -1,13 +1,8 @@
-h1 {
-  color: blue;
-}
-
 .container {
-  margin: 0 auto;
-  width: 80%;
+  background-color: #fff;
 }
 .container h1 {
-  color: red;
+  color: #000;
 }
 .container p {
   font-size: 20px;
@@ -22,9 +17,34 @@ h1 {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 16px;
 }
 .container button:hover {
   background-color: orange;
+}
+.container h1 {
+  font-size: 32px;
+  color: purple;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container h2 {
+  font-size: 24px;
+  color: blue;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container h3 {
+  font-size: 20px;
+  color: red;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=estiloCompilado.css.map */

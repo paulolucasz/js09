@@ -1,18 +1,35 @@
-h1 {
-    color: blue;
-}
+$tema-escuro: false;
 
 .container{
-    margin: 0 auto;
-    width: 80%;
-    
-    h1{
-        color: red;
+
+    @if $tema-escuro {
+        background-color: #333;
+            h1 {
+                color: #fff;
+            }
+
+    } @else {
+        background-color: #fff;
+            h1 {
+                color: #000;
+            }
     }
+
+    @mixin centralizar {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    //@include centralizar;
+    //margin: 0 auto; 
+    //width: 80%;
+    //padding: 20px;
 
     p {
         font-size: 20px;
         color: green;}
+        
 
         b {
             font-weight: bold;
@@ -23,9 +40,31 @@ h1 {
         border: none;
         padding: 10px 20px;
         cursor: pointer;
+        font-size: 16px;
 
         &:hover {
             background-color: orange;
         }
     }
+
+    h1 {
+        font-size: 32px;
+        color: purple;
+        margin-bottom: 20px;
+        @include centralizar;
+    }
+
+        h2 {
+        font-size: 24px;
+        color: blue;
+        margin-top: 20px;
+        @include centralizar;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: red;
+        margin-top: 15px;
+        @include centralizar;
+        }
 }
