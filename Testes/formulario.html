@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de EventListeners</title>
+  <style>
+    #caixa {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Exemplo de EventListeners</h2>
+
+  <!-- Evento de mouse (click) -->
+  <div id="caixa">Clique aqui!</div>
+
+  <!-- Evento de teclado -->
+  <input type="text" id="campoTexto" placeholder="Digite algo e pressione uma tecla" />
+
+  <!-- Evento de formulário -->
+  <form id="meuFormulario">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    // 1. Evento de mouse (click)
+    const caixa = document.getElementById('caixa');
+    caixa.addEventListener('click', () => {
+      caixa.style.backgroundColor = 'lightgreen';
+      caixa.textContent = 'Você clicou!';
+    });
+
+    // 2. Evento de teclado (keydown)
+    const campoTexto = document.getElementById('campoTexto');
+    campoTexto.addEventListener('keydown', (event) => {
+      console.log(`Tecla pressionada: ${event.key}`);
+    });
+
+    // 3. Evento de formulário (submit)
+    const formulario = document.getElementById('meuFormulario');
+    formulario.addEventListener('submit', (event) => {
+      event.preventDefault(); // Impede o envio real do formulário
+      alert('Formulário enviado com sucesso!');
+    });
+  </script>
+
+</body>
+</html>
