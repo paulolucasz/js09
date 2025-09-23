@@ -1,0 +1,163 @@
+html {
+    /* Definindo a base para a unidade REM. 10px é mais fácil de calcular (1.2rem = 12px)
+               mas 62.5% (de 16px) é a prática mais comum e acessível. */
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 2rem;
+    /* Usando REM para espaçamento geral */
+    font-size: 1.6rem;
+    /* Tamanho de fonte padrão do corpo (16px) */
+}
+
+.container {
+    max-width: 90ch;
+    /* Limitando a largura do contêiner a 90 caracteres para melhor leitura */
+    margin: auto;
+    background: #fff;
+    padding: 3%;
+    /* Usando % para um espaçamento interno fluido */
+    border-radius: 10px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    /* Usando REM para sombra */
+}
+
+h1,
+h2 {
+    color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.2rem;
+    /* REM para o título principal */
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    /* REM para subtítulos */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+code {
+    background-color: #eee;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 90%;
+    /* % para deixar o código um pouco menor que o texto ao redor */
+}
+
+.exemplo {
+    border: 2px dashed #007BFF;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+    /* Garante que os filhos não vazem */
+}
+
+/* --- Estilos Específicos para os Exemplos --- */
+
+/* Exemplo para REM e EM */
+.rem-exemplo {
+    font-size: 1.8rem;
+    /* 1.8 * 10px (da raiz) = 18px */
+}
+
+.em-container {
+    font-size: 2rem;
+    /* 20px */
+}
+
+.em-exemplo {
+    font-size: 1.5em;
+    /* 1.5 * 20px (do pai .em-container) = 30px */
+}
+
+/* Exemplo para % */
+.percent-container {
+    width: 100%;
+    /* Ocupa toda a largura do seu contêiner pai (.exemplo) */
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.percent-exemplo {
+    width: 75%;
+    /* 75% da largura do .percent-container */
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Exemplo para VH */
+.vh-exemplo {
+    height: 40vh;
+    /* 40% da altura da viewport (área visível da janela) */
+    background-color: #28a745;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* Exemplo para VMIN e VMAX */
+.viewport-units-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    text-align: center;
+}
+
+.vmin-exemplo,
+.vmax-exemplo {
+    width: 30vmin;
+    /* 30% da menor dimensão da viewport */
+    height: 30vmin;
+    /* 30% da menor dimensão da viewport */
+    background-color: #dc3545;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vmin;
+    /* Fonte também responsiva com vmin */
+}
+
+.vmax-exemplo {
+    width: 20vmax;
+    /* 20% da maior dimensão da viewport */
+    height: 20vmax;
+    /* 20% da maior dimensão da viewport */
+    background-color: #ffc107;
+    color: #333;
+    font-size: 2.5vmax;
+    /* Fonte responsiva com vmax */
+}
+
+/* Exemplo para CH */
+.ch-exemplo {
+    width: 65ch;
+    /* Limita a largura a aproximadamente 65 caracteres */
+    max-width: 100%;
+    /* Garante que não quebre o layout em telas pequenas */
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background: #fafafa;
+}

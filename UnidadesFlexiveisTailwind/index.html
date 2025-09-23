@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Unidades Flexíveis em CSS</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Guia de Unidades Flexíveis em CSS</h1>
+        <p>Unidades flexíveis (ou relativas) em CSS são essenciais para criar layouts responsivos. Elas se adaptam a diferentes tamanhos de tela e configurações do usuário, ao contrário das unidades fixas como pixels (<code>px</code>).</p>
+
+        <section id="rem">
+            <h2>1. rem (Root EM)</h2>
+            <p>A unidade <code>rem</code> é relativa ao tamanho da fonte do elemento raiz (<code>&lt;html&gt;</code>). Nesta página, a fonte raiz foi definida como <code>62.5%</code> do padrão, o que resulta em <code>1rem = 10px</code>, facilitando os cálculos.</p>
+            <div class="exemplo">
+                <p class="rem-exemplo">Este parágrafo tem <code>font-size: 1.8rem</code>, o que equivale a 18px.</p>
+            </div>
+        </section>
+
+        <section id="em">
+            <h2>2. em</h2>
+            <p>A unidade <code>em</code> é relativa ao tamanho da fonte do seu elemento pai. Isso pode levar a um efeito cascata se houver muitos elementos aninhados.</p>
+            <div class="exemplo">
+                <div class="em-container">
+                    <p>O <code>font-size</code> deste contêiner é <code>2rem</code> (20px).</p>
+                    <p class="em-exemplo">Este parágrafo interno tem <code>font-size: 1.5em</code>, resultando em 1.5 * 20px = 30px.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="percent">
+            <h2>3. % (Porcentagem)</h2>
+            <p>A unidade <code>%</code> é sempre relativa a uma propriedade do seu elemento pai. É fundamental para criar layouts fluidos.</p>
+            <div class="exemplo">
+                <div class="percent-container">
+                    <div class="percent-exemplo">
+                        Este elemento tem <code>width: 75%</code> do seu contêiner cinza.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vh-vw">
+            <h2>4. vh (Viewport Height)</h2>
+            <p><code>1vh</code> é igual a 1% da altura da viewport (a área visível da janela do navegador). É perfeito para criar seções que ocupam a tela toda.</p>
+            <div class="exemplo">
+                <div class="vh-exemplo">
+                    Este bloco tem <code>height: 40vh</code>.
+                </div>
+            </div>
+        </section>
+        
+        <section id="vmin-vmax">
+            <h2>5. vmin e vmax</h2>
+            <p><code>vmin</code> usa a menor dimensão da viewport (altura ou largura) e <code>vmax</code> usa a maior. Redimensione sua janela para ver o efeito.</p>
+            <div class="exemplo">
+                <div class="viewport-units-container">
+                    <div class="vmin-exemplo">30vmin</div>
+                    <div class="vmax-exemplo">20vmax</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ch">
+            <h2>6. ch (Character Unit)</h2>
+            <p>A unidade <code>ch</code> é relativa à largura do caractere "0" da fonte. É excelente para controlar o comprimento de linhas de texto para melhor legibilidade.</p>
+            <div class="exemplo">
+                <p class="ch-exemplo">Este bloco de texto tem a propriedade <code>width: 65ch;</code>. Isso limita sua largura para conter, em média, 65 caracteres por linha, tornando a leitura mais confortável.</p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
